@@ -15,12 +15,12 @@
         <android.support.design.widget.BottomNavigationView
             app:itemTextColor="@drawable/bottom_navigation_selector"
             app:itemIconTint="@drawable/bottom_navigation_selector"
-            app:itemBackground="@color/bottomNavigationItemBackground"
+            android:background="@color/bottomNavigationItemBackground"
             app:menu="@menu/bottom_navigation"
             android:id="@+id/mainBottomNavigation"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="62dp"/>
         <LinearLayout
             android:layout_above="@id/mainBottomNavigation"
             android:orientation="vertical"
