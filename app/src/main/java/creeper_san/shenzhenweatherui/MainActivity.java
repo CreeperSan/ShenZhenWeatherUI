@@ -47,6 +47,7 @@ public class MainActivity extends BaseActivity implements WeatherFragment.OnDraw
             @Override
             public void onClick(View v) {
                 startActivity(SettingActivity.class);
+                drawerLayout.closeDrawers();
             }
         });
     }
@@ -207,6 +208,7 @@ public class MainActivity extends BaseActivity implements WeatherFragment.OnDraw
                     }else {
                         weatherFragment.setCurrentPage(holder.getAdapterPosition());
                     }
+                    drawerLayout.closeDrawers();
                 }
             });
 
