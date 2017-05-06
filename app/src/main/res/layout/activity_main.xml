@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainDrawerLayout"
+    tools:context="creeper_san.shenzhenweatherui.MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.BottomNavigationView
+            app:itemTextColor="@drawable/bottom_navigation_selector"
+            app:itemIconTint="@drawable/bottom_navigation_selector"
+            app:itemBackground="@color/bottomNavigationItemBackground"
+            app:menu="@menu/bottom_navigation"
+            android:id="@+id/mainBottomNavigation"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_above="@id/mainBottomNavigation"
+            android:orientation="vertical"
+            android:id="@+id/mainFragmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/mainDrawerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/mainDrawerToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+            <TextView
+                android:text="城市管理"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/mainDrawerSetting"
+                android:padding="8dp"
+                android:src="@drawable/city_setting"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_below="@id/mainDrawerToolbarLayout"
+            android:id="@+id/mainDrawerPerson"
+            android:layout_margin="22dp"
+            android:src="@drawable/city_default_head"
+            android:layout_centerHorizontal="true"
+            android:layout_width="46dp"
+            android:layout_height="46dp" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/mainDrawerList"
+            android:layout_below="@id/mainDrawerPerson"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

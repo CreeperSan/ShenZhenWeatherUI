@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="90dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="5/6"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/itemWeatherForecastDay"
+        android:shadowColor="#000000"
+        android:shadowRadius="5"
+        android:textColor="#ffff00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/itemWeatherForecastDay"
+        android:text="周一"
+        android:shadowColor="#000000"
+        android:shadowRadius="5"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/itemWeatherForecastWeekday"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="25/24"
+        android:shadowColor="#000000"
+        android:shadowRadius="5"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/itemWeatherForecastTemp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:layout_above="@id/itemWeatherForecastTemp"
+        android:layout_below="@id/itemWeatherForecastWeekday"
+        android:id="@+id/itemWeatherForecastWeather"
+        android:layout_width="60dp"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

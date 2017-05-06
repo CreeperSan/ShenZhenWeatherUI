@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PrefNormal">
+        <attr name="title" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="PrefSwitch">
+        <attr name="switchTitle" format="string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="PrefValue">
+        <attr name="valueTitle" format="string"/>
+        <attr name="valueValue" format="string"/>
+    </declare-styleable>
+    
+
+    <declare-styleable name="PrefGroup">
+        <attr name="groupTitle" format="string"/>
+    </declare-styleable>
+    
+</resources>

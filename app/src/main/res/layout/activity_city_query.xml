@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context="creeper_san.shenzhenweatherui.CityQueryActivity">
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/queryBtn"
+        android:background="@null"
+        android:text="取消"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:textSize="14sp"
+        android:paddingEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:textColorHint="#99ffffff"
+        android:textColor="#ffffff"
+        android:hint="输入城市名称"
+        android:background="@drawable/shape_rect_round_corner_black_alpha"
+        android:layout_alignTop="@id/queryBtn"
+        android:layout_alignBottom="@id/queryBtn"
+        android:layout_toStartOf="@id/queryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:dividerHeight="1px"
+        android:divider="#ffffff"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/queryBtn"
+        android:id="@+id/queryList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

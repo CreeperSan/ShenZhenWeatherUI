@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#c0c0c0">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/fragmentWeatherBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragmentWeatherWeatherList"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"/>
+
+    <LinearLayout
+        android:layout_above="@id/fragmentWeatherWeatherList"
+        android:orientation="horizontal"
+        android:id="@+id/fragmentWeatherWeatherCenterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:textSize="12sp"
+                android:id="@+id/fragmentForecastDaily"
+                android:layout_margin="4dp"
+                android:background="@drawable/selector_forecast_type"
+                android:gravity="center"
+                android:checked="true"
+                android:text="逐日预报"
+                android:textColor="#ffffff"
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <RadioButton
+                android:textSize="12sp"
+                android:id="@+id/fragmentForecastHourly"
+                android:layout_margin="4dp"
+                android:background="@drawable/selector_forecast_type"
+                android:gravity="center"
+                android:text="逐时预报"
+                android:textColor="#ffffff"
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_weight="0.6"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:background="@drawable/shape_rect_round_corner_white_alpha"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_zan_icon"
+                android:tint="#ffffff" />
+
+            <TextView
+                android:textColor="#99ffffff"
+                android:text="准(24)"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_weight="0.6"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:background="@drawable/shape_rect_round_corner_white_alpha"
+            android:layout_height="match_parent">
+            <ImageView
+                android:scaleY="-1"
+                android:tint="#ffffff"
+                android:src="@drawable/btn_zan_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textColor="#99ffffff"
+                android:text="不准(7)"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/fragmentForecastToolbarLayout"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/fragmentForecastDrawerBtn"
+            android:src="@drawable/ic_dehaze_white_24dp"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/fragmentWeatherSpeakBtn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_volume_up_white_24dp"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_toLeftOf="@id/fragmentWeatherSpeakBtn"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_share_white_24dp"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:textSize="20sp"
+            android:text="深圳"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragmentWeatherWeatherPager"
+        android:layout_below="@id/fragmentForecastToolbarLayout"
+        android:layout_above="@id/fragmentWeatherWeatherCenterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</RelativeLayout>

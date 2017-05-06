@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2">
+
+    <RelativeLayout
+        android:id="@+id/fragmentMeToolbar"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_brush_white_24dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+
+        <TextView
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:text="我报天气"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_below="@id/fragmentMeToolbar"
+        android:id="@+id/fragmentMeRadioGroup"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="实景模式"
+            android:id="@+id/fragmentMeMode1"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:checked="true"
+            android:background="@drawable/selector_rect_round_corner_left_type"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="天气报告"
+            android:id="@+id/fragmentMeMode2"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/selector_rect_round_corner_right_type"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_below="@id/fragmentMeRadioGroup"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:id="@+id/fragmentMeFragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/fragmentMeList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:background="#33ffffff"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:src="@drawable/map"
+            android:scaleType="centerCrop"
+            android:id="@+id/fragmentMeMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fragmentMeCamera"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_camera"
+        android:layout_width="72dp"
+        android:layout_height="72dp" />
+
+
+</RelativeLayout>

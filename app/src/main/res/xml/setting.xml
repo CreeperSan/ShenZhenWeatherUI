@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <creeper_san.shenzhenweatherui.PrefNormalCategory
+        app:groupTitle="推送设置">
+        <creeper_san.shenzhenweatherui.PrefValueText
+            app:valueValue="07:00-21:00"
+            app:valueTitle="接收通知时段"/>
+        <creeper_san.shenzhenweatherui.PrefNormal app:title="推动类别设置"/>
+    </creeper_san.shenzhenweatherui.PrefNormalCategory>
+
+    <creeper_san.shenzhenweatherui.PrefNormalCategory
+        app:groupTitle="通用设置">
+        <creeper_san.shenzhenweatherui.PrefIOSSwitch
+            app:switchTitle="开启深圳地区气象产品"/>
+    </creeper_san.shenzhenweatherui.PrefNormalCategory>
+
+    <creeper_san.shenzhenweatherui.PrefNormalCategory
+        app:groupTitle="帮助&amp;其他">
+        <creeper_san.shenzhenweatherui.PrefNormal app:title="常见问题"/>
+        <creeper_san.shenzhenweatherui.PrefNormal app:title="操作指南"/>
+        <creeper_san.shenzhenweatherui.PrefNormal app:title="声明"/>
+        <creeper_san.shenzhenweatherui.PrefNormal
+            app:title="建议与反馈">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.baidu.com"/>
+        </creeper_san.shenzhenweatherui.PrefNormal>
+        <creeper_san.shenzhenweatherui.PrefNormal app:title="关于"/>
+    </creeper_san.shenzhenweatherui.PrefNormalCategory>
+
+</PreferenceScreen>
