@@ -22,7 +22,7 @@ public class PrefNormalCategory extends PreferenceGroup {
         TypedArray array = context.obtainStyledAttributes(attrs,R.styleable.PrefGroup);
         title = array.getString(R.styleable.PrefGroup_groupTitle);
         array.recycle();
-
+        setSelectable(false);
     }
 
     @Override
